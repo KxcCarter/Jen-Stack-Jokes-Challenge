@@ -33,7 +33,7 @@ function renderJokes(joke) {
 
     for (let each of joke) {
         $('#outputDiv').append(`
-        <p>${each.jokeQuestion} ${each.punchLine}  - <span class="fomr-text text-muted"> ${each.whoseJoke}</span> </p>
+        <p>${each.jokeQuestion} ${each.punchLine}  <span class="form-text text-muted"> - ${each.whoseJoke}</span> </p>
         `);
     }
 }
