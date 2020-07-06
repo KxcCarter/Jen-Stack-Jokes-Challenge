@@ -40,7 +40,8 @@ app.use(express.static('server/public'));
 // ROUTES ------------ //
 
 app.get('/api/jokesArray', (req, res) => {
-    res.send(jokes);
+    res.send({ jokes });
+    //res.sendStatus(200);
 });
 
 app.post('/api/userJokes', (req, res) => {
