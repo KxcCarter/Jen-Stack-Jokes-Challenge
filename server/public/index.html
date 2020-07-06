@@ -15,31 +15,36 @@
         <div class="jumbotron text-center">
             <h1 class="text-info">JEN Stack Code Challenge</h1>
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="addJokeForm">
+                    <div class="form-group">
+                        <label for="whoseJokeIn">Whose Joke</label>
+                        <input class="form-control" type="text" id="whoseJokeIn" />
+                    </div>
+                    <div class="form-group">
+                        <label for="questionIn">Question</label>
+                        <input class="form-control" type="text" id="questionIn" />
+                    </div>
 
-        <form id="addJokeForm">
-            <div class="form-group">
-                <label for="whoseJokeIn">Whose Joke</label>
-                <input class="form-control" type="text" id="whoseJokeIn" />
+                    <div class="form-group">
+                        <label for="punchlineIn">Punchline</label>
+                        <input class="form-control" type="text" id="punchlineIn" />
+                    </div>
+
+                    <button type="submit" class="btn btn-dark" id="addJokeButton">
+              Add Joke
+            </button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="questionIn">Question</label>
-                <input class="form-control" type="text" id="questionIn" />
+
+            <div class="col-md-6">
+                <div class=""></div>
+                <h2 class="display-4 text-center text-info">Jokes:</h2>
+                <div class="bg-light border rounded m-3 p-2" id="outputDiv"></div>
             </div>
-
-            <div class="form-group">
-                <label for="punchlineIn">Punchline</label>
-                <input class="form-control" type="text" id="punchlineIn" />
-            </div>
-
-            <button type="submit" class="btn btn-dark" id="addJokeButton">
-          Add Joke
-        </button>
-        </form>
-
-        <div class="mt-5">
-            <h2>Jokes:</h2>
-            <div class="bg-light border rounded m-3 p-2" id="outputDiv"></div>
         </div>
+    </div>
     </div>
 </body>
 
