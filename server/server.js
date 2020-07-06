@@ -46,6 +46,8 @@ app.get('/api/jokesArray', (req, res) => {
 
 app.post('/api/userJokes', (req, res) => {
     let newJoke = req.body;
+    console.log(newJoke);
+
     jokes.push(newJoke);
     res.sendStatus(201);
 });
