@@ -6,7 +6,8 @@ let newUserJoke = {};
 
 function onReady() {
     console.log('DOM ready');
-    $('#addJokeButton').on('click', addNewJoke);
+    //$('#addJokeButton').on('click', addNewJoke);
+    $('#addJokeForm').on('submit', addNewJoke);
     getJokes();
 }
 
@@ -32,12 +33,13 @@ function renderJokes(joke) {
 
     for (let each of joke) {
         $('#outputDiv').append(`
-        <p>${each.jokeQuestion} ${each.punchLine}  - ${each.whoseJoke}</p>
+        <p>${each.jokeQuestion} ${each.punchLine}  - <span class="fomr-text text-muted"> ${each.whoseJoke}</span> </p>
         `);
     }
 }
 
-function addNewJoke() {
+function addNewJoke(event) {
+    event.preventDefault();
     console.log(`something funny here`);
     let userJoke = createNewJoke();
     $.ajax({
